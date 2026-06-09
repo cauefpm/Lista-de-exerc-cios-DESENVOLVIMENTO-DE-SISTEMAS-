@@ -3,154 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Exercicios - DOM</title>
+    <title>Lista de Exercicios</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Lista de Exercicios de Desenvolvimento de Sistemas</h1>
-        <p>Atividades simples usando HTML, CSS e JavaScript.</p>
-        <button id="botaoTema" type="button">Ativar dark mode</button>
-    </header>
+    <div class="container py-4">
+        <h1 class="mb-4 text-center">Lista de Exercicios</h1>
 
-    <main>
-        <section class="exercicio">
-            <h2>1. Exibir texto na tela</h2>
-            <p>Digite uma mensagem e clique no botao.</p>
-            <div class="linha">
-                <input id="textoExibir" type="text" placeholder="Digite algo">
-                <button id="botaoExibirTexto" type="button">Exibir</button>
-            </div>
-            <p id="resultadoTexto" class="resultado">O texto aparecera aqui.</p>
-        </section>
-
-        <section class="exercicio">
-            <h2>2. Saudacao personalizada</h2>
-            <p>Digite seu nome para receber uma mensagem.</p>
-            <div class="linha">
-                <input id="nomeUsuario" type="text" placeholder="Seu nome">
-                <button id="botaoSaudar" type="button">Saudar</button>
-            </div>
-            <p id="mensagemSaudacao" class="resultado">A saudacao aparecera aqui.</p>
-        </section>
-
-        <section class="exercicio">
-            <h2>3. Contador de cliques</h2>
-            <p>O numero aumenta cada vez que voce clica.</p>
-            <p class="contador">Cliques: <span id="valorContador">0</span></p>
-            <button id="botaoContador" type="button">Contar</button>
-        </section>
-
-        <section class="exercicio">
-            <h2>4. Mudar a cor do texto</h2>
-            <h3 id="textoColorido">Texto colorido</h3>
-            <button id="botaoAzul" type="button">Azul</button>
-            <button id="botaoVerde" type="button">Verde</button>
-            <button id="botaoRosa" type="button">Rosa</button>
-        </section>
-
-        <section class="exercicio">
-            <h2>5. Aumentar e diminuir fonte</h2>
-            <p id="textoFonte">Este texto pode ficar maior ou menor.</p>
-            <button id="botaoDiminuirFonte" type="button">Diminuir</button>
-            <button id="botaoAumentarFonte" type="button">Aumentar</button>
-        </section>
-
-        <section class="exercicio">
-            <h2>6. Mostrar e esconder conteudo</h2>
-            <p id="conteudoOculto" class="caixa">Este conteudo pode ser escondido pelo JavaScript.</p>
-            <button id="botaoMostrarEsconder" type="button">Esconder conteudo</button>
-        </section>
-
-        <section class="exercicio">
-            <h2>7. Trocar imagem</h2>
-            <img id="imagemAlternada" class="imagem" src="https://placehold.co/400x200/87ceeb/000000?text=Imagem+1" alt="Imagem do exercicio">
-            <button id="botaoTrocarImagem" type="button">Trocar imagem</button>
-        </section>
-
-        <section class="exercicio">
-            <h2>8. Validar e-mail</h2>
-            <p>O e-mail sera valido se tiver @.</p>
-            <div class="linha">
-                <input id="emailUsuario" type="email" placeholder="exemplo@email.com">
-                <button id="botaoValidarEmail" type="button">Validar</button>
-            </div>
-            <p id="mensagemEmail" class="resultado">A validacao aparecera aqui.</p>
-        </section>
-
-        <section class="exercicio">
-            <h2>9. Lista de tarefas</h2>
-            <div class="linha">
-                <input id="textoTarefa" type="text" placeholder="Nova tarefa">
-                <button id="botaoAdicionarTarefa" type="button">Adicionar</button>
-            </div>
-            <ul id="listaTarefas"></ul>
-        </section>
-
-        <section class="exercicio">
-            <h2>10. Cartao de apresentacao</h2>
-            <input id="cartaoNome" type="text" placeholder="Nome">
-            <input id="cartaoIdade" type="number" min="0" placeholder="Idade">
-            <input id="cartaoProfissao" type="text" placeholder="Profissao">
-            <textarea id="cartaoDescricao" rows="4" placeholder="Descricao"></textarea>
-            <button id="botaoGerarCartao" type="button">Gerar cartao</button>
-            <div id="cartaoApresentacao" class="cartao">
-                O cartao aparecera aqui.
-            </div>
-        </section>
-
-        <section class="exercicio">
-            <h2>11. Personalizacao visual</h2>
-            <label>Cor de fundo</label>
-            <input id="corFundoArea" type="color" value="#dbeafe">
-
-            <label>Largura</label>
-            <input id="larguraArea" type="number" min="120" max="700" value="260">
-
-            <label>Altura</label>
-            <input id="alturaArea" type="number" min="80" max="500" value="140">
-
-            <label>Cor da borda</label>
-            <input id="corBordaArea" type="color" value="#2563eb">
-
-            <button id="botaoAplicarVisual" type="button">Aplicar</button>
-            <div id="areaVisual" class="area">Area visual</div>
-        </section>
-
-        <section class="exercicio">
-            <h2>Desafio final</h2>
-            <p>Use os controles para mudar o cartao.</p>
-
-            <label>Cor de fundo</label>
-            <input id="finalCorFundo" type="color" value="#ffffff">
-
-            <label>Cor do texto</label>
-            <input id="finalCorTexto" type="color" value="#222222">
-
-            <label>Tamanho da fonte</label>
-            <input id="finalFonte" type="range" min="14" max="36" value="20">
-
-            <label>Arredondamento</label>
-            <input id="finalBorda" type="range" min="0" max="40" value="10">
-
-            <label>Largura</label>
-            <input id="finalLargura" type="range" min="220" max="620" value="360">
-
-            <label>Altura</label>
-            <input id="finalAltura" type="range" min="140" max="360" value="210">
-
-            <label class="checkbox">
-                <input id="finalTemaEscuro" type="checkbox">
-                Usar tema escuro no cartao
-            </label>
-
-            <div id="cartaoFinal" class="cartao-final">
-                <h3>Cartao personalizado</h3>
-                <p>Desenvolvimento de Sistemas</p>
-            </div>
-        </section>
-    </main>
-
-    <script src="script.js"></script>
+        <div class="list-group">
+            <a class="list-group-item list-group-item-action" href="atividade-1/index.html">Atividade 1</a>
+            <a class="list-group-item list-group-item-action" href="atividade-2/index.html">Atividade 2</a>
+            <a class="list-group-item list-group-item-action" href="atividade-3/index.html">Atividade 3</a>
+            <a class="list-group-item list-group-item-action" href="atividade-4/index.html">Atividade 4</a>
+            <a class="list-group-item list-group-item-action" href="atividade-5/index.html">Atividade 5</a>
+            <a class="list-group-item list-group-item-action" href="atividade-6/index.html">Atividade 6</a>
+            <a class="list-group-item list-group-item-action" href="atividade-7/index.html">Atividade 7</a>
+            <a class="list-group-item list-group-item-action" href="atividade-8/index.html">Atividade 8</a>
+            <a class="list-group-item list-group-item-action" href="atividade-9/index.html">Atividade 9</a>
+            <a class="list-group-item list-group-item-action" href="atividade-10/index.html">Atividade 10</a>
+            <a class="list-group-item list-group-item-action" href="atividade-11/index.html">Atividade 11</a>
+            <a class="list-group-item list-group-item-action" href="atividade-12/index.html">Atividade 12</a>
+            <a class="list-group-item list-group-item-action" href="desafio-final/index.html">Desafio Final</a>
+        </div>
+    </div>
 </body>
 </html>
