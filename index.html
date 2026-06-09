@@ -3,217 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista de Exercícios - DOM com JavaScript</title>
+    <title>Lista de Exercicios - DOM</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header class="cabecalho">
-        <div class="cabecalho__conteudo">
-            <span class="etiqueta">HTML + CSS + JavaScript puro</span>
-            <h1>Lista de Exercícios de Desenvolvimento de Sistemas</h1>
-            <p>Uma página interativa com manipulação do DOM, formulários, validações, estilos dinâmicos e tema escuro.</p>
-            <button id="botaoTema" class="botao botao--tema" type="button">Ativar dark mode</button>
-        </div>
+    <header>
+        <h1>Lista de Exercicios de Desenvolvimento de Sistemas</h1>
+        <p>Atividades simples usando HTML, CSS e JavaScript.</p>
+        <button id="botaoTema" type="button">Ativar dark mode</button>
     </header>
 
-    <main class="conteudo">
-        <section class="grade-exercicios">
-            <article class="card" id="exercicio-1">
-                <div class="card__cabecalho">
-                    <span class="numero">1</span>
-                    <div>
-                        <h2>Exibindo informações na tela</h2>
-                        <p>Digite uma mensagem e envie para que ela apareça na página.</p>
-                    </div>
-                </div>
-                <div class="grupo-controle">
-                    <input id="textoExibir" type="text" placeholder="Digite algo interessante">
-                    <button id="botaoExibirTexto" class="botao" type="button">Exibir texto</button>
-                </div>
-                <p id="resultadoTexto" class="resultado">O texto aparecerá aqui.</p>
-            </article>
-
-            <article class="card" id="exercicio-2">
-                <div class="card__cabecalho">
-                    <span class="numero">2</span>
-                    <div>
-                        <h2>Saudação personalizada</h2>
-                        <p>Informe seu nome para receber uma mensagem de boas-vindas.</p>
-                    </div>
-                </div>
-                <div class="grupo-controle">
-                    <input id="nomeUsuario" type="text" placeholder="Seu nome">
-                    <button id="botaoSaudar" class="botao" type="button">Saudar</button>
-                </div>
-                <p id="mensagemSaudacao" class="resultado">A saudação será exibida aqui.</p>
-            </article>
-
-            <article class="card" id="exercicio-3">
-                <div class="card__cabecalho">
-                    <span class="numero">3</span>
-                    <div>
-                        <h2>Contador de cliques</h2>
-                        <p>Cada clique aumenta o contador em uma unidade.</p>
-                    </div>
-                </div>
-                <div class="contador">
-                    <strong id="valorContador">0</strong>
-                    <button id="botaoContador" class="botao" type="button">Clique para contar</button>
-                </div>
-            </article>
-
-            <article class="card" id="exercicio-4">
-                <div class="card__cabecalho">
-                    <span class="numero">4</span>
-                    <div>
-                        <h2>Alterando a cor de um elemento</h2>
-                        <p>Use os botões para mudar a cor do texto abaixo.</p>
-                    </div>
-                </div>
-                <h3 id="textoColorido" class="texto-destaque">Texto com cor dinâmica</h3>
-                <div class="linha-botoes">
-                    <button class="botao botao--azul" data-cor="#2563eb" type="button">Azul</button>
-                    <button class="botao botao--verde" data-cor="#16a34a" type="button">Verde</button>
-                    <button class="botao botao--rosa" data-cor="#db2777" type="button">Rosa</button>
-                </div>
-            </article>
-
-            <article class="card" id="exercicio-5">
-                <div class="card__cabecalho">
-                    <span class="numero">5</span>
-                    <div>
-                        <h2>Controle de tamanho da fonte</h2>
-                        <p>Aumente ou diminua o tamanho do texto sem recarregar a página.</p>
-                    </div>
-                </div>
-                <p id="textoFonte" class="texto-fonte">Este texto pode ficar maior ou menor.</p>
-                <div class="linha-botoes">
-                    <button id="botaoDiminuirFonte" class="botao botao--secundario" type="button">Diminuir</button>
-                    <button id="botaoAumentarFonte" class="botao" type="button">Aumentar</button>
-                </div>
-            </article>
-
-            <article class="card" id="exercicio-6">
-                <div class="card__cabecalho">
-                    <span class="numero">6</span>
-                    <div>
-                        <h2>Mostrar e esconder conteúdo</h2>
-                        <p>O botão alterna a visibilidade da informação.</p>
-                    </div>
-                </div>
-                <div id="conteudoOculto" class="caixa-informacao">
-                    Manipular classes com JavaScript é uma forma simples de alterar o visual e o comportamento da página.
-                </div>
-                <button id="botaoMostrarEsconder" class="botao" type="button">Esconder conteúdo</button>
-            </article>
-
-            <article class="card" id="exercicio-7">
-                <div class="card__cabecalho">
-                    <span class="numero">7</span>
-                    <div>
-                        <h2>Troca de imagem</h2>
-                        <p>Clique no botão para alternar entre duas imagens.</p>
-                    </div>
-                </div>
-                <img id="imagemAlternada" class="imagem-demo" alt="Ilustração alternada">
-                <button id="botaoTrocarImagem" class="botao" type="button">Trocar imagem</button>
-            </article>
-
-            <article class="card" id="exercicio-8">
-                <div class="card__cabecalho">
-                    <span class="numero">8</span>
-                    <div>
-                        <h2>Validação simples de e-mail</h2>
-                        <p>O texto será considerado válido se possuir o caractere @.</p>
-                    </div>
-                </div>
-                <div class="grupo-controle">
-                    <input id="emailUsuario" type="email" placeholder="exemplo@email.com">
-                    <button id="botaoValidarEmail" class="botao" type="button">Validar</button>
-                </div>
-                <p id="mensagemEmail" class="resultado">A validação aparecerá aqui.</p>
-            </article>
-
-            <article class="card" id="exercicio-9">
-                <div class="card__cabecalho">
-                    <span class="numero">9</span>
-                    <div>
-                        <h2>Lista dinâmica</h2>
-                        <p>Adicione quantas tarefas quiser em uma lista criada pelo DOM.</p>
-                    </div>
-                </div>
-                <div class="grupo-controle">
-                    <input id="textoTarefa" type="text" placeholder="Nova tarefa">
-                    <button id="botaoAdicionarTarefa" class="botao" type="button">Adicionar</button>
-                </div>
-                <ul id="listaTarefas" class="lista-tarefas"></ul>
-            </article>
-
-            <article class="card card--largo" id="exercicio-10">
-                <div class="card__cabecalho">
-                    <span class="numero">10</span>
-                    <div>
-                        <h2>Cartão de apresentação</h2>
-                        <p>Preencha o formulário para gerar um cartão com os dados informados.</p>
-                    </div>
-                </div>
-                <div class="formulario-grid">
-                    <input id="cartaoNome" type="text" placeholder="Nome">
-                    <input id="cartaoIdade" type="number" min="0" placeholder="Idade">
-                    <input id="cartaoProfissao" type="text" placeholder="Profissão">
-                    <textarea id="cartaoDescricao" rows="4" placeholder="Descrição"></textarea>
-                </div>
-                <button id="botaoGerarCartao" class="botao" type="button">Gerar cartão</button>
-                <div id="cartaoApresentacao" class="cartao-apresentacao">
-                    <p>O cartão será criado aqui.</p>
-                </div>
-            </article>
-
-            <article class="card card--largo" id="exercicio-11">
-                <div class="card__cabecalho">
-                    <span class="numero">11</span>
-                    <div>
-                        <h2>Personalização visual</h2>
-                        <p>Altere fundo, tamanho e borda de uma área visual.</p>
-                    </div>
-                </div>
-                <div class="painel-controles">
-                    <label>Cor de fundo <input id="corFundoArea" type="color" value="#dbeafe"></label>
-                    <label>Largura <input id="larguraArea" type="number" min="120" max="700" value="260"></label>
-                    <label>Altura <input id="alturaArea" type="number" min="80" max="500" value="140"></label>
-                    <label>Cor da borda <input id="corBordaArea" type="color" value="#2563eb"></label>
-                </div>
-                <button id="botaoAplicarVisual" class="botao" type="button">Aplicar alterações</button>
-                <div id="areaVisual" class="area-visual">Área visual</div>
-            </article>
+    <main>
+        <section class="exercicio">
+            <h2>1. Exibir texto na tela</h2>
+            <p>Digite uma mensagem e clique no botao.</p>
+            <div class="linha">
+                <input id="textoExibir" type="text" placeholder="Digite algo">
+                <button id="botaoExibirTexto" type="button">Exibir</button>
+            </div>
+            <p id="resultadoTexto" class="resultado">O texto aparecera aqui.</p>
         </section>
 
-        <section class="card card--final" id="desafio-final">
-            <div class="card__cabecalho">
-                <span class="numero">Final</span>
-                <div>
-                    <h2>Desafio Final - Painel de Personalização</h2>
-                    <p>Personalize completamente o cartão. As mudanças acontecem em tempo real.</p>
-                </div>
+        <section class="exercicio">
+            <h2>2. Saudacao personalizada</h2>
+            <p>Digite seu nome para receber uma mensagem.</p>
+            <div class="linha">
+                <input id="nomeUsuario" type="text" placeholder="Seu nome">
+                <button id="botaoSaudar" type="button">Saudar</button>
             </div>
-            <div class="desafio-layout">
-                <div class="painel-controles painel-controles--final">
-                    <label>Cor de fundo <input id="finalCorFundo" type="color" value="#ffffff"></label>
-                    <label>Cor do texto <input id="finalCorTexto" type="color" value="#172033"></label>
-                    <label>Tamanho da fonte <input id="finalFonte" type="range" min="14" max="36" value="20"></label>
-                    <label>Arredondamento <input id="finalBorda" type="range" min="0" max="40" value="16"></label>
-                    <label>Largura <input id="finalLargura" type="range" min="220" max="620" value="360"></label>
-                    <label>Altura <input id="finalAltura" type="range" min="140" max="360" value="210"></label>
-                    <label class="checkbox-linha">
-                        <input id="finalTemaEscuro" type="checkbox">
-                        Tema escuro no cartão
-                    </label>
-                </div>
-                <div id="cartaoFinal" class="cartao-final">
-                    <span>Cartão personalizado</span>
-                    <strong>Desenvolvimento de Sistemas</strong>
-                    <p>Altere os controles para ver o resultado ao vivo.</p>
-                </div>
+            <p id="mensagemSaudacao" class="resultado">A saudacao aparecera aqui.</p>
+        </section>
+
+        <section class="exercicio">
+            <h2>3. Contador de cliques</h2>
+            <p>O numero aumenta cada vez que voce clica.</p>
+            <p class="contador">Cliques: <span id="valorContador">0</span></p>
+            <button id="botaoContador" type="button">Contar</button>
+        </section>
+
+        <section class="exercicio">
+            <h2>4. Mudar a cor do texto</h2>
+            <h3 id="textoColorido">Texto colorido</h3>
+            <button id="botaoAzul" type="button">Azul</button>
+            <button id="botaoVerde" type="button">Verde</button>
+            <button id="botaoRosa" type="button">Rosa</button>
+        </section>
+
+        <section class="exercicio">
+            <h2>5. Aumentar e diminuir fonte</h2>
+            <p id="textoFonte">Este texto pode ficar maior ou menor.</p>
+            <button id="botaoDiminuirFonte" type="button">Diminuir</button>
+            <button id="botaoAumentarFonte" type="button">Aumentar</button>
+        </section>
+
+        <section class="exercicio">
+            <h2>6. Mostrar e esconder conteudo</h2>
+            <p id="conteudoOculto" class="caixa">Este conteudo pode ser escondido pelo JavaScript.</p>
+            <button id="botaoMostrarEsconder" type="button">Esconder conteudo</button>
+        </section>
+
+        <section class="exercicio">
+            <h2>7. Trocar imagem</h2>
+            <img id="imagemAlternada" class="imagem" src="https://placehold.co/400x200/87ceeb/000000?text=Imagem+1" alt="Imagem do exercicio">
+            <button id="botaoTrocarImagem" type="button">Trocar imagem</button>
+        </section>
+
+        <section class="exercicio">
+            <h2>8. Validar e-mail</h2>
+            <p>O e-mail sera valido se tiver @.</p>
+            <div class="linha">
+                <input id="emailUsuario" type="email" placeholder="exemplo@email.com">
+                <button id="botaoValidarEmail" type="button">Validar</button>
+            </div>
+            <p id="mensagemEmail" class="resultado">A validacao aparecera aqui.</p>
+        </section>
+
+        <section class="exercicio">
+            <h2>9. Lista de tarefas</h2>
+            <div class="linha">
+                <input id="textoTarefa" type="text" placeholder="Nova tarefa">
+                <button id="botaoAdicionarTarefa" type="button">Adicionar</button>
+            </div>
+            <ul id="listaTarefas"></ul>
+        </section>
+
+        <section class="exercicio">
+            <h2>10. Cartao de apresentacao</h2>
+            <input id="cartaoNome" type="text" placeholder="Nome">
+            <input id="cartaoIdade" type="number" min="0" placeholder="Idade">
+            <input id="cartaoProfissao" type="text" placeholder="Profissao">
+            <textarea id="cartaoDescricao" rows="4" placeholder="Descricao"></textarea>
+            <button id="botaoGerarCartao" type="button">Gerar cartao</button>
+            <div id="cartaoApresentacao" class="cartao">
+                O cartao aparecera aqui.
+            </div>
+        </section>
+
+        <section class="exercicio">
+            <h2>11. Personalizacao visual</h2>
+            <label>Cor de fundo</label>
+            <input id="corFundoArea" type="color" value="#dbeafe">
+
+            <label>Largura</label>
+            <input id="larguraArea" type="number" min="120" max="700" value="260">
+
+            <label>Altura</label>
+            <input id="alturaArea" type="number" min="80" max="500" value="140">
+
+            <label>Cor da borda</label>
+            <input id="corBordaArea" type="color" value="#2563eb">
+
+            <button id="botaoAplicarVisual" type="button">Aplicar</button>
+            <div id="areaVisual" class="area">Area visual</div>
+        </section>
+
+        <section class="exercicio">
+            <h2>Desafio final</h2>
+            <p>Use os controles para mudar o cartao.</p>
+
+            <label>Cor de fundo</label>
+            <input id="finalCorFundo" type="color" value="#ffffff">
+
+            <label>Cor do texto</label>
+            <input id="finalCorTexto" type="color" value="#222222">
+
+            <label>Tamanho da fonte</label>
+            <input id="finalFonte" type="range" min="14" max="36" value="20">
+
+            <label>Arredondamento</label>
+            <input id="finalBorda" type="range" min="0" max="40" value="10">
+
+            <label>Largura</label>
+            <input id="finalLargura" type="range" min="220" max="620" value="360">
+
+            <label>Altura</label>
+            <input id="finalAltura" type="range" min="140" max="360" value="210">
+
+            <label class="checkbox">
+                <input id="finalTemaEscuro" type="checkbox">
+                Usar tema escuro no cartao
+            </label>
+
+            <div id="cartaoFinal" class="cartao-final">
+                <h3>Cartao personalizado</h3>
+                <p>Desenvolvimento de Sistemas</p>
             </div>
         </section>
     </main>
