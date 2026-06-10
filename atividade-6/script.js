@@ -1,12 +1,14 @@
-document.getElementById("botao").onclick = function () {
-    var texto = document.getElementById("texto");
-    var botao = document.getElementById("botao");
+// Guarda os elementos usados na atividade
+const botaoMostrarEsconder = document.getElementById("botao");
+const paragrafoConteudo = document.getElementById("texto");
 
-    if (texto.style.display === "none") {
-        texto.style.display = "block";
-        botao.textContent = "Esconder";
+// Mostra ou esconde o conteudo da pagina
+botaoMostrarEsconder.onclick = function () {
+    if (paragrafoConteudo.style.display === "none") {
+        paragrafoConteudo.style.display = "block";
+        botaoMostrarEsconder.textContent = "Esconder";
     } else {
-        texto.style.display = "none";
-        botao.textContent = "Mostrar";
+        paragrafoConteudo.style.display = "none";
+        botaoMostrarEsconder.textContent = "Mostrar";
     }
 };

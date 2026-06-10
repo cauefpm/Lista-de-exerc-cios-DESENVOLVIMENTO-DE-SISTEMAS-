@@ -1,11 +1,20 @@
-document.getElementById("azul").onclick = function () {
-    document.getElementById("texto").style.color = "blue";
+// Guarda os elementos usados na atividade
+const botaoAzul = document.getElementById("azul");
+const botaoVerde = document.getElementById("verde");
+const botaoVermelho = document.getElementById("vermelho");
+const textoColorido = document.getElementById("texto");
+
+// Muda a cor do texto para azul
+botaoAzul.onclick = function () {
+    textoColorido.style.color = "blue";
 };
 
-document.getElementById("verde").onclick = function () {
-    document.getElementById("texto").style.color = "green";
+// Muda a cor do texto para verde
+botaoVerde.onclick = function () {
+    textoColorido.style.color = "green";
 };
 
-document.getElementById("vermelho").onclick = function () {
-    document.getElementById("texto").style.color = "red";
+// Muda a cor do texto para vermelho
+botaoVermelho.onclick = function () {
+    textoColorido.style.color = "red";
 };

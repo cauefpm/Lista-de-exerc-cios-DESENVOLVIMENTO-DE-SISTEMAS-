@@ -1,9 +1,15 @@
-document.getElementById("botao").onclick = function () {
-    var nome = document.getElementById("nome").value;
+// Guarda os elementos usados na atividade
+const botaoSaudar = document.getElementById("botao");
+const inputNome = document.getElementById("nome");
+const paragrafoResultado = document.getElementById("resultado");
 
-    if (nome === "") {
-        document.getElementById("resultado").textContent = "Digite seu nome.";
+// Exibe uma saudacao ou pede para o usuario digitar o nome
+botaoSaudar.onclick = function () {
+    const nomeDigitado = inputNome.value;
+
+    if (nomeDigitado === "") {
+        paragrafoResultado.textContent = "Digite seu nome.";
     } else {
-        document.getElementById("resultado").textContent = "Bem-vindo, " + nome + "!";
+        paragrafoResultado.textContent = "Bem-vindo, " + nomeDigitado + "!";
     }
 };

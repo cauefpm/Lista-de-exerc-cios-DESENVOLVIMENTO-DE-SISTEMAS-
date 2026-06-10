@@ -1,12 +1,17 @@
-document.getElementById("botao").onclick = function () {
-    var email = document.getElementById("email").value;
-    var resultado = document.getElementById("resultado");
+// Guarda os elementos usados na atividade
+const botaoValidar = document.getElementById("botao");
+const inputEmail = document.getElementById("email");
+const paragrafoResultado = document.getElementById("resultado");
 
-    if (email.indexOf("@") >= 0) {
-        resultado.textContent = "E-mail valido.";
-        resultado.style.color = "green";
+// Verifica se o e-mail possui o caractere @
+botaoValidar.onclick = function () {
+    const emailDigitado = inputEmail.value;
+
+    if (emailDigitado.indexOf("@") >= 0) {
+        paragrafoResultado.textContent = "E-mail valido.";
+        paragrafoResultado.style.color = "green";
     } else {
-        resultado.textContent = "E-mail invalido.";
-        resultado.style.color = "red";
+        paragrafoResultado.textContent = "E-mail invalido.";
+        paragrafoResultado.style.color = "red";
     }
 };

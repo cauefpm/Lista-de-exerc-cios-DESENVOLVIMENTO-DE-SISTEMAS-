@@ -1,11 +1,17 @@
-var tamanho = 16;
+// Guarda os elementos usados na atividade
+const botaoAumentar = document.getElementById("aumentar");
+const botaoDiminuir = document.getElementById("diminuir");
+const paragrafoTexto = document.getElementById("texto");
+let tamanhoFonte = 16;
 
-document.getElementById("aumentar").onclick = function () {
-    tamanho = tamanho + 2;
-    document.getElementById("texto").style.fontSize = tamanho + "px";
+// Aumenta o tamanho da fonte
+botaoAumentar.onclick = function () {
+    tamanhoFonte = tamanhoFonte + 2;
+    paragrafoTexto.style.fontSize = tamanhoFonte + "px";
 };
 
-document.getElementById("diminuir").onclick = function () {
-    tamanho = tamanho - 2;
-    document.getElementById("texto").style.fontSize = tamanho + "px";
+// Diminui o tamanho da fonte
+botaoDiminuir.onclick = function () {
+    tamanhoFonte = tamanhoFonte - 2;
+    paragrafoTexto.style.fontSize = tamanhoFonte + "px";
 };

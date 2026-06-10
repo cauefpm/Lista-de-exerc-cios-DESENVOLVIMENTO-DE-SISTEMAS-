@@ -1,6 +1,10 @@
-var contador = 0;
+// Guarda os elementos usados na atividade
+const botaoContar = document.getElementById("botao");
+const spanContador = document.getElementById("contador");
+let quantidadeCliques = 0;
 
-document.getElementById("botao").onclick = function () {
-    contador = contador + 1;
-    document.getElementById("contador").textContent = contador;
+// Soma 1 ao contador a cada clique
+botaoContar.onclick = function () {
+    quantidadeCliques = quantidadeCliques + 1;
+    spanContador.textContent = quantidadeCliques;
 };

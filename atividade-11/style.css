@@ -1,5 +1,6 @@
 body {
-    background-color: #f8f9fa;
+    font-family: Arial, sans-serif;
+    margin: 20px;
 }
 
 .area {
@@ -11,4 +12,5 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 10px;
 }

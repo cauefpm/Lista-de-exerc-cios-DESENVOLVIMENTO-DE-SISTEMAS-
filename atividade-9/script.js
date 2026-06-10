@@ -1,11 +1,16 @@
-document.getElementById("botao").onclick = function () {
-    var tarefa = document.getElementById("tarefa").value;
+// Guarda os elementos usados na atividade
+const botaoAdicionar = document.getElementById("botao");
+const inputTarefa = document.getElementById("tarefa");
+const listaTarefas = document.getElementById("lista");
 
-    if (tarefa !== "") {
-        var item = document.createElement("li");
-        item.textContent = tarefa;
-        item.className = "list-group-item";
-        document.getElementById("lista").appendChild(item);
-        document.getElementById("tarefa").value = "";
+// Adiciona a tarefa digitada na lista
+botaoAdicionar.onclick = function () {
+    const tarefaDigitada = inputTarefa.value;
+
+    if (tarefaDigitada !== "") {
+        const itemTarefa = document.createElement("li");
+        itemTarefa.textContent = tarefaDigitada;
+        listaTarefas.appendChild(itemTarefa);
+        inputTarefa.value = "";
     }
 };
